@@ -1,0 +1,39 @@
+create table users
+  (id int identity(1,1),
+   username nvarchar(50),
+   password nvarchar(50),
+   unit char(1));
+
+insert into users(username,password,unit) values('123','123','1');
+insert into users(username,password,unit) values('1','1','1');
+drop table users;
+
+select * from users;
+
+
+create table books
+  (id int identity(1,1),
+   bookname nvarchar(50),
+   company nvarchar(50),
+   author nvarchar(50),
+   pressdata datetime,
+   price nvarchar(50),
+   conun nvarchar(50),
+   beizhu nvarchar(50));
+
+drop table books;
+
+select * from books;
+
+create table [library_new].[dbo].[bookbrowse]
+    (id nvarchar(50),
+	 studentname nvarchar(50),
+	 bookname nvarchar(50), 
+	 borrowdata datetime, 
+	 returndata datetime,
+	 beizhu nvarchar(50), 
+	 isreturn char(1))
+
+drop table bookbrowse;
+
+select * from bookbrowse;
